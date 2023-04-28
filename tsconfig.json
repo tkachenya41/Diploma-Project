@@ -23,7 +23,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2020",
-    "types": ["vite/client"],
+    "types": ["vite/client", "vite-plugin-svgr/client"],
     "useDefineForClassFields": true
   },
   "exclude": ["node_modules"],
