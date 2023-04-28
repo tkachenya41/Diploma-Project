@@ -20,3 +20,7 @@
 ## Материалы
 
 - [Официальная документация](https://react.dev/)
+- [Typescript в React](https://blog.logrocket.com/your-reference-guide-to-using-typescript-in-react/)
+- [Synthetic Event](https://react.dev/reference/react-dom/components/common#react-event-object)
+- [Управление состоянием](https://habr.com/ru/post/507572/)
+- [React Hooks простыми словами](https://habr.com/ru/company/simbirsoft/blog/652321/)
