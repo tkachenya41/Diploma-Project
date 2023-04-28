@@ -13,6 +13,12 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   plugins: ['@typescript-eslint', 'react', 'react-hooks', 'prettier'],
+  overrides: [{
+    files: ['vite.config.ts'],
+    rules: {
+      'import/no-default-export': 'off'
+    }
+  }],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: true,

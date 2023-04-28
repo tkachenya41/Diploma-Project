@@ -46,7 +46,9 @@
     "prettier-plugin-sort-json": "1.0.0",
     "sass": "1.62.1",
     "typescript": "5.0.4",
-    "vite": "4.3.3"
+    "vite": "4.3.3",
+    "vite-plugin-eslint": "1.8.1",
+    "vite-plugin-svgr": "2.4.0"
   },
   "engines": {
     "node": "18.16.0"
