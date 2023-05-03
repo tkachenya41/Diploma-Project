@@ -21,6 +21,7 @@
 
 - [Официальная документация](https://react.dev/)
 - [Typescript в React](https://blog.logrocket.com/your-reference-guide-to-using-typescript-in-react/)
+- [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/advanced/types_react_api)
 - [Synthetic Event](https://react.dev/reference/react-dom/components/common#react-event-object)
 - [Управление состоянием](https://habr.com/ru/post/507572/)
 - [React Hooks простыми словами](https://habr.com/ru/company/simbirsoft/blog/652321/)
