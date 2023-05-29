@@ -162,7 +162,7 @@ module.exports = {
         leadingUnderscore: 'require'
       }
     ],
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': ['error', { 'ignoreRestSiblings': true }],
     'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/require-description': [
       'error',
