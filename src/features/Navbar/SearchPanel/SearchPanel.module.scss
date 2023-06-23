@@ -1,0 +1,11 @@
+.search {
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 0px 10px;
+  color: var(--text-color);
+
+  &:focus {
+    outline-color: var(--border-color);
+  }
+}
