@@ -2,8 +2,15 @@
   --primary-color: #7b61ff;
   --secondary-color: #323537;
   --primary-hover-color: #917cff;
-  --text-color: #ffffff;
-  --background-color: #80858b;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #80858b;
+  --background-color: #000000;
   --background-light-color: #afb2b6;
   --border-color: #7b61ff;
+}
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+.userText {
+  font-size: 20px;
+  color: var(--primary-text-color);
+}
