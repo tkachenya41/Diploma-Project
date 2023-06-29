@@ -1,11 +1,13 @@
 .search {
   border-radius: 10px;
   background-color: var(--secondary-color);
-  border: none;
-  padding: 0px 10px;
-  color: var(--text-color);
-
+  border: 3px solid var(--background-color);
+  outline: none;
+  font-size: 17px;
+  padding: 13px 10px;
+  color: var(--primary-text-color);
+  margin-right: 20px;
   &:focus {
-    outline-color: var(--border-color);
+    border-color: var(--border-color);
   }
 }

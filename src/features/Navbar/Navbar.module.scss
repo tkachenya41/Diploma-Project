@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.7fr 3fr 1fr;
+  background-color: var(--background-color);
+  grid-auto-flow: column;
+  color: var(--text-color);
+
+  > svg {
+    margin-right: 146px;
+  }
+}
