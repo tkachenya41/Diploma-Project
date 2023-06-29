@@ -1,0 +1,33 @@
+.container {
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  border: 2px solid var(--background-graphite-color);
+  border-radius: 10px;
+  background-color: var(--background-dark-color);
+  transform: scale(1);
+  transition: transform ease-in-out 300ms;
+
+  a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    width: 150px;
+    padding: 17px 0 17px 20px;
+    &:first-child {
+      border-bottom: 1px solid var(--background-graphite-color);
+    }
+    &:hover,
+    &:active {
+      color: var(--primary-hover-color);
+    }
+  }
+  &[data-open='false'] {
+    transform: scale(0);
+  }
+}

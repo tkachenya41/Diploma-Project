@@ -12,7 +12,7 @@ export const MainPage = () => {
         <div className={MainStyle.container}>
           <Navbar />
           <main className={MainStyle.main}>
-            <Menu />
+            <Menu appearance={MainStyle.menu} />
             <Outlet />
           </main>
         </div>
