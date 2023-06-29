@@ -11,5 +11,6 @@ export type ButtonAppearances =
 
 export const ButtonAppearance = {
   Primary: 'primary',
-  Secondary: 'secondary'
+  Secondary: 'secondary',
+  Arrow: 'arrow'
 };

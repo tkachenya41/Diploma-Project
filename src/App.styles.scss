@@ -5,7 +5,9 @@
   --primary-text-color: #ffffff;
   --secondary-text-color: #80858b;
   --background-color: #000000;
+  --background-dark-color: #242426;
   --background-light-color: #afb2b6;
+  --background-graphite-color: #323537;
   --border-color: #7b61ff;
 }
 body {
@@ -13,4 +15,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+#root {
+  overflow: hidden;
 }

@@ -14,12 +14,12 @@ export const Button = ({
   return (
     <button
       {...pathThroughProperties}
-      className={classNames({
+      className={`${pathThroughProperties.className || ''} ${classNames({
         [buttonStyle.btn]: true,
         [buttonStyle[appearance]]: true
-      })}
+      })}`}
     >
-      {icon && <div className={buttonStyle.icon}>{icon}</div>}
+      {icon && <>{icon}</>}
       {text}
     </button>
   );
