@@ -8,9 +8,21 @@ import { ReactComponent as TrendIcon } from '~/assets/icons/trends.svg';
 import menuStyle from './Menu.module.scss';
 import { Navlinks } from '../Navbar/navbar.constants';
 
-export const Menu = () => {
+export const Menu = ({
+  appearance = menuStyle.linksList,
+  isOpen,
+  makeOpen
+}: {
+  appearance?: string;
+  isOpen?: boolean;
+  makeOpen?: () => void;
+}) => {
   return (
-    <div className={menuStyle.linksList}>
+    <div
+      className={appearance}
+      data-open={isOpen}
+      onClick={makeOpen}
+    >
       {Navlinks.map((link) => (
         <NavLink
           className={menuStyle.link}
