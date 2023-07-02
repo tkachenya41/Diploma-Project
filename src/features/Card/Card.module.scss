@@ -1,0 +1,15 @@
+.card {
+  color: aliceblue;
+}
+.container {
+  flex: 1 1 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  & img {
+    width: 250px;
+    height: 357px;
+    object-fit: cover;
+  }
+}

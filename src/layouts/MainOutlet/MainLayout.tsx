@@ -3,9 +3,9 @@ import { Outlet } from 'react-router-dom';
 import { Menu } from '~/features/Menu/Menu';
 import { Navbar } from '~/features/Navbar/Navbar';
 
-import MainStyle from './MainPage.module.scss';
+import MainStyle from './MainLayout.module.scss';
 
-export const MainPage = () => {
+export const MainLayout = () => {
   return (
     <>
       <div className={MainStyle.wrapper}>

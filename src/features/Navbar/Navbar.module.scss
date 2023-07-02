@@ -5,6 +5,7 @@
   background-color: var(--background-color);
   color: var(--text-color);
   padding-bottom: 64px;
+  gap: 10px;
   @media (max-width: 768px) {
     position: relative;
     gap: 15px;

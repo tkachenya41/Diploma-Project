@@ -16,12 +16,13 @@
   font-size: 20px;
 
   &:hover,
-  &:active {
+  &:active,
+  &:hover svg path {
     color: var(--primary-hover-color);
+    fill: currentColor;
   }
 
   > svg {
-    color: var(--secondary-text-color);
     margin-right: 23px;
     width: 20px;
     height: 20px;
