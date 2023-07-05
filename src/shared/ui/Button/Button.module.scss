@@ -8,6 +8,9 @@
   align-items: center;
   padding: 10px 25px;
   gap: 15px;
+  &[type='submit'] {
+    display: none;
+  }
 
   &:disabled {
     background-color: var(--background-light-color);

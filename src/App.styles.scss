@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
+
 :root {
   --primary-color: #7b61ff;
   --secondary-color: #323537;
@@ -9,12 +11,16 @@
   --background-light-color: #afb2b6;
   --background-graphite-color: #323537;
   --border-color: #7b61ff;
+  --good-rating-color: #00a340;
+  --usual-rating-color: #f3a608;
+  --bad-rating-color: #f45d2d;
 }
 body {
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Exo 2', sans-serif;
 }
 #root {
   overflow: hidden;

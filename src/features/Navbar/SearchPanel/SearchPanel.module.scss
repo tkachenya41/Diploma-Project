@@ -1,15 +1,18 @@
+.form {
+  flex: 1 1 60%;
+  @media (max-width: 520px) {
+    order: 3;
+  }
+}
 .search {
   border-radius: 10px;
   background-color: var(--secondary-color);
   border: 3px solid var(--background-color);
   outline: none;
   font-size: 17px;
-  flex: 1 1 60%;
   padding: 13px 10px;
   color: var(--primary-text-color);
-  @media (max-width: 520px) {
-    order: 3;
-  }
+  width: 100%;
 
   &:focus {
     border-color: var(--border-color);

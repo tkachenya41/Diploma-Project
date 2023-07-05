@@ -5,8 +5,11 @@ import { BASE_API_URL, type ResponseAPI, KeyAdmin } from './constants';
 export async function fetchMovies(): Promise<ResponseAPI> {
   const headers = new AxiosHeaders();
   headers.set('X-API-KEY', `${KeyAdmin}`);
-  const { data } = await axios<ResponseAPI>(`${BASE_API_URL}v1.3/movie`, {
-    headers
-  });
+  const { data } = await axios<ResponseAPI>(
+    `${BASE_API_URL}v1.3/movie?limit=20`,
+    {
+      headers
+    }
+  );
   return data;
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { fetchMovies } from '~/api/fetchMovies';
 import { type CardAPI } from '~/entities/Card';
-import { Cards } from '~/features/Card/Cards';
+import { Cards } from '~/features/Cards/Cards';
 
 import HomeStyle from './Home.module.scss';
 

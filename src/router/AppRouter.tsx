@@ -1,8 +1,10 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import { MainLayout } from '~/layouts/MainOutlet/MainLayout';
+import { CardPage } from '~/pages/CardPage/CardPage';
 import { FavoritePage } from '~/pages/FavoritesPage/FavoritePage';
 import { Home } from '~/pages/Home/Home';
+import { SearchOutputPage } from '~/pages/SearchOutputPage/SearchOutputPage';
 import { SettingsPage } from '~/pages/SettingsPage/SettingsPage';
 import { TrendsPage } from '~/pages/TrendsPage/TrendsPage';
 
@@ -14,6 +16,14 @@ export const routerSchema = createBrowserRouter([
       {
         index: true,
         Component: Home
+      },
+      {
+        path: '/card/:id',
+        element: <CardPage />
+      },
+      {
+        path: '/search/:request',
+        element: <SearchOutputPage />
       },
       {
         path: '/Trends',
