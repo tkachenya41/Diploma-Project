@@ -12,14 +12,18 @@ function isCyrillic(request: string) {
 }
 
 export async function fetchSearch({
+  limit,
   request
 }: {
+  limit: number;
   request: string;
 }): Promise<ResponseAPI> {
   const headers = new AxiosHeaders();
   headers.set('X-API-KEY', KeyAdmin);
   const { data } = await axios<ResponseAPI>(
-    `${BASE_API_URL}v1.3/movie?selectFields=${cardRequestFields.join(' ')}${
+    `${BASE_API_URL}v1.3/movie?limit=${limit}&selectFields=${cardRequestFields.join(
+      ' '
+    )}${
       isCyrillic(request) ? `&name=${request}` : `&alternativeName=${request}`
     }`,
     {

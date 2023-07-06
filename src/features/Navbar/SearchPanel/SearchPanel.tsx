@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Button } from '~/shared/ui/Button/Button';
 
@@ -12,29 +12,25 @@ export const SearchPanel = () => {
   const [formState, setFormState] = useState<SearchState>(
     getDefaultFormValues()
   );
+  const navigate = useNavigate();
   return (
     <form
       className={SearchStyle.form}
       onSubmit={(event) => {
         event.preventDefault();
+        navigate(`/search/${formState.request}`);
         setFormState(getDefaultFormValues);
       }}
     >
       <input
         className={SearchStyle.search}
-        type="search"
         value={formState.request}
         placeholder="Search"
         onChange={({ target: { value } }) => {
           setFormState({ request: value });
         }}
       />
-      <Link to={`/search/${formState.request}`}>
-        <Button
-          type="submit"
-          onClick={() => setFormState(getDefaultFormValues)}
-        ></Button>
-      </Link>
+      <Button type="submit"></Button>
     </form>
   );
 };

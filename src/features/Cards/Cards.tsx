@@ -8,7 +8,7 @@ import CardStyle from './Cards.module.scss';
 
 export const Cards = ({ card }: { card: CardAPI[] }) => {
   return (
-    <div className={CardStyle.container}>
+    <div className={CardStyle.main}>
       {card.map((card) => (
         <div
           className={CardStyle.card}
@@ -27,7 +27,7 @@ export const Cards = ({ card }: { card: CardAPI[] }) => {
               {card.poster ? (
                 <img src={card.poster.url}></img>
               ) : (
-                <img src="/src/assets/icons/no-image.jpeg"></img>
+                <img src="/no-image.jpeg"></img>
               )}
             </div>
             {card.persons &&

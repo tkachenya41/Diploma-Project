@@ -27,12 +27,13 @@
     background-color: var(--bad-rating-color);
   }
 }
-.container {
-  flex: 1 1 80%;
+
+.main {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
+
   & h3 {
     margin: 5px 0;
     color: var(--primary-text-color);

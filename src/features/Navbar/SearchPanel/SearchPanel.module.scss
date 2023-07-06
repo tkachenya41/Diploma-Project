@@ -3,6 +3,9 @@
   @media (max-width: 520px) {
     order: 3;
   }
+  button {
+    display: none;
+  }
 }
 .search {
   border-radius: 10px;
@@ -12,7 +15,7 @@
   font-size: 17px;
   padding: 13px 10px;
   color: var(--primary-text-color);
-  width: 100%;
+  width: 93%;
 
   &:focus {
     border-color: var(--border-color);
