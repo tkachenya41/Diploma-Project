@@ -1,0 +1,29 @@
+.container {
+  max-width: 520px;
+  @media (max-width: 1200px) {
+    max-width: 310px;
+  }
+  @media (max-width: 366px) {
+    max-width: 210px;
+  }
+  &:last-child span {
+    background-color: aliceblue;
+  }
+  margin: 0 !important;
+  padding: 30px 0 40px 0 !important;
+  .slide {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+  }
+  .actors {
+    width: 100%;
+    background-color: var(--background-color) !important;
+  }
+  .actorPhoto {
+    object-fit: cover;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+  }
+}

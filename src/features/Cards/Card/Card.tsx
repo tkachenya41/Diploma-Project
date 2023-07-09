@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 
 import { type CardAPI } from '~/entities/Card';
+import { Slider } from '~/shared/ui/Swiper/Swiper';
 
 import CardStyle from './Card.module.scss';
 import { getRatingClass } from '../Card.utils';
@@ -13,9 +14,13 @@ export const Card = ({ card }: { card: CardAPI }) => {
           <div className={CardStyle.container}>
             <div>
               {card.poster ? (
-                <img src={card.poster.url}></img>
+                <img
+                  className={CardStyle.img}
+                  src={card.poster.url}
+                ></img>
               ) : (
                 <img
+                  className={CardStyle.img}
                   src={'/no-image.jpeg'}
                   alt="No Image"
                 />
@@ -82,9 +87,11 @@ export const Card = ({ card }: { card: CardAPI }) => {
                   <span>{card.ageRating && `${card.ageRating}+`}</span>
                 </div>
               </div>
+              <Slider card={card}></Slider>
             </div>
           </div>
-          <div className={CardStyle.actors}>
+
+          {/* <div className={CardStyle.actors}>
             {card.persons &&
               card.persons.map(
                 (person) =>
@@ -101,7 +108,7 @@ export const Card = ({ card }: { card: CardAPI }) => {
                     </div>
                   )
               )}
-          </div>
+          </div> */}
         </div>
       ) : null}
     </>

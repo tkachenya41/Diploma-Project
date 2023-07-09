@@ -1,0 +1,11 @@
+.swiper-button-next {
+  top: 10px !important;
+}
+
+.swiper-button-prev {
+  top: 10px !important;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+}
