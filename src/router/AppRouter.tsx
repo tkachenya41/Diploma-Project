@@ -6,6 +6,8 @@ import { FavoritePage } from '~/pages/FavoritesPage/FavoritePage';
 import { Home } from '~/pages/Home/Home';
 import { SearchOutputPage } from '~/pages/SearchOutputPage/SearchOutputPage';
 import { SettingsPage } from '~/pages/SettingsPage/SettingsPage';
+import { SignInPage } from '~/pages/SignInPage/SignInPage';
+import { SignUpPage } from '~/pages/SignUpPage/SignUpPage';
 import { TrendsPage } from '~/pages/TrendsPage/TrendsPage';
 
 export const routerSchema = createBrowserRouter([
@@ -37,12 +39,15 @@ export const routerSchema = createBrowserRouter([
         path: '/Settings',
         element: <SettingsPage />
       },
+
       {
         path: '*',
         element: <div>not found</div>
       }
     ]
-  }
+  },
+  { path: '/sign-in', element: <SignInPage /> },
+  { path: '/sign-up', element: <SignUpPage /> }
 ]);
 
 export const AppRouter = () => {

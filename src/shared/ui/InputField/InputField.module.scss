@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+}
+.input {
+  border-radius: 10px;
+  width: 100%;
+  padding: 16px 20px;
+  background-color: var(--background-graphite-color);
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  &:focus {
+    border: 2px solid var(--primary-hover-color);
+  }
+  &:disabled {
+    background-color: var(--secondary-text-color);
+  }
+}
+.label {
+  line-height: 44px;
+}

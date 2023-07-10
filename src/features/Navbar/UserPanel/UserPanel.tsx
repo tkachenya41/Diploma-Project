@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 import { ReactComponent as ArrowDown } from '~/assets/icons/arrowDown.svg';
 import { ReactComponent as ArrowRight } from '~/assets/icons/arrowRight.svg';
 import { ReactComponent as User } from '~/assets/icons/user.svg';
@@ -11,6 +13,7 @@ import userPanelStyle from './UserPanel.module.scss';
 
 export const UserPanel = () => {
   const [isOpenUserBar, setIsOpenUserBar] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const toggleUserBar = () =>
     setIsOpenUserBar((hasBeenOpened) => !hasBeenOpened);
@@ -19,6 +22,7 @@ export const UserPanel = () => {
       <Button
         appearance={ButtonAppearance.Primary}
         icon={<User />}
+        onClick={() => navigate(`/sign-in`)}
       ></Button>
       <span className={userPanelStyle.userText}></span>
       <Button

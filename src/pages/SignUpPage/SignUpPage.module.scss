@@ -1,0 +1,15 @@
+.pixema {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../../assets/icons/background.png);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
