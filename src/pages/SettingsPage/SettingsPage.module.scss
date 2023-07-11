@@ -1,4 +1,22 @@
 .container {
   color: var(--primary-text-color);
   flex: 1 1 80%;
+  max-width: 57%;
+  h3 {
+    margin: 0 0 20px 0;
+  }
+  p {
+    color: var(--secondary-text-color);
+  }
+  .theme {
+    border: none;
+    background-color: var(--background-dark-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 20px;
+  }
+  @media (max-width: 935px) {
+    max-width: 100%;
+  }
 }

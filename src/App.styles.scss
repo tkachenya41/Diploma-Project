@@ -14,7 +14,23 @@
   --good-rating-color: #00a340;
   --usual-rating-color: #f3a608;
   --bad-rating-color: #f45d2d;
+  --error-color: #ff5154;
 }
+:root.light {
+  --background-color: #ffffff;
+  --secondary-color: #afb2b6;
+  --primary-text-color: #000000;
+  --primary-hover-color: #917cff;
+  --background-light-color: #afb2b6;
+  --border-color: #7b61ff;
+  --good-rating-color: #00a340;
+  --usual-rating-color: #f3a608;
+  --bad-rating-color: #f45d2d;
+  --error-color: #ff5154;
+  --secondary-text-color: #80858b;
+  --background-dark-color: #afb2b6;
+}
+
 body {
   background-color: var(--background-color);
   margin: 0;

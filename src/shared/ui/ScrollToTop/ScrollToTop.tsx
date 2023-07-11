@@ -37,9 +37,7 @@ export const ScrollToTop = () => {
           onClick={scrollTop}
           className={ScrollStyle.icon}
         ></ScrollIcon>
-      ) : (
-        <div>Ничего</div>
-      )}
+      ) : null}
     </div>
   );
 };

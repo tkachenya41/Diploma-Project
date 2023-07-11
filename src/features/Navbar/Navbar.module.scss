@@ -15,6 +15,11 @@
   }
   .pixema {
     flex: 1 1 20%;
+    & :nth-child(4),
+    :nth-child(5),
+    :nth-child(6) {
+      fill: var(--primary-text-color);
+    }
   }
 
   & .burger {

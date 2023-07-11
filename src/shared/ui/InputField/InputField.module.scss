@@ -9,6 +9,11 @@
   outline: none;
   border: none;
   box-sizing: border-box;
+  color: var(--primary-text-color);
+  font-size: 17px;
+  &[data-valid='false'] {
+    border: 2px solid var(--tms-error-color);
+  }
   &:focus {
     border: 2px solid var(--primary-hover-color);
   }
@@ -18,4 +23,8 @@
 }
 .label {
   line-height: 44px;
+}
+.error {
+  color: var(--error-color);
+  text-align: center;
 }
