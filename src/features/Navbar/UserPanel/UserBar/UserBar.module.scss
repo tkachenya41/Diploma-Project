@@ -31,4 +31,16 @@
   &[data-open='false'] {
     transform: scale(0);
   }
+  @media (max-width: 768px) {
+    position: static;
+    border: none;
+    transform: none;
+    transition: none;
+  }
+}
+@media (max-width: 768px) {
+  .link {
+    text-transform: uppercase;
+    justify-content: center;
+  }
 }

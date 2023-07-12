@@ -1,9 +1,12 @@
 import { useCallback, useMemo, useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Button } from '~/shared/ui/Button/Button';
 import { InputField } from '~/shared/ui/InputField/InputField';
+import { type RootState, useAppDispatch } from '~/store/store.types';
+import { createTokens } from '~/store/user/user.api';
 
 import { type FormState } from './form.types';
 import { getDefaultFormValues, getFormErrors } from './form.utils';
@@ -14,6 +17,16 @@ export const SignInForm = () => {
   const [touchedFields, setTouchedFields] = useState<Set<string>>(
     () => new Set()
   );
+  const navigate = useNavigate();
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const user = useSelector((state: RootState) =>
+    state.user.currentUser.status === 'success'
+      ? state.user.currentUser.data
+      : null
+  );
+  const dispatch = useAppDispatch();
 
   const updateFormValues = useCallback((newFormValue: Partial<FormState>) => {
     setFormState((previousFields) => ({ ...previousFields, ...newFormValue }));
@@ -30,9 +43,22 @@ export const SignInForm = () => {
       className={SignInStyle.container}
       onSubmit={(event) => {
         event.preventDefault();
+        setIsLoading(true);
+        dispatch(createTokens(formState))
+          .then(() => {
+            setIsLoading(true);
+            navigate('/');
+          })
+          .catch((error) => {
+            setIsLoading(false);
+            setErrorMessage((error as Error).message);
+          });
       }}
     >
       <h2 className={SignInStyle.text}>Sign In</h2>
+      {errorMessage ? (
+        <div style={{ color: 'var(--error-color)' }}>{errorMessage}</div>
+      ) : null}
       <div className={SignInStyle.inputs}>
         <InputField
           type="email"
@@ -61,7 +87,10 @@ export const SignInForm = () => {
       </div>
       <Button
         disabled={
-          touchedFields.size === 0 || Object.keys(formErrors).length > 0
+          isLoading ||
+          touchedFields.size === 0 ||
+          Object.keys(formErrors).length > 0 ||
+          !!user
         }
         className={SignInStyle.button}
         text="Sign In"

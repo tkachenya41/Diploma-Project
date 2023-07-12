@@ -1,3 +1,7 @@
+body {
+  color: var(--primary-text-color);
+}
+
 .pixema {
   position: absolute;
   left: 10px;
@@ -12,4 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
