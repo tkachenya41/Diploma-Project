@@ -1,12 +1,20 @@
+import { useState } from 'react';
+
 import classNames from 'classnames';
 
+import { ReactComponent as Favorites } from '~/assets/icons/favorites.svg';
+import { ReactComponent as IconIMDB } from '~/assets/icons/imdb.svg';
+import { ReactComponent as Options } from '~/assets/icons/options.svg';
 import { type CardAPI } from '~/entities/Card';
+import { Button } from '~/shared/ui/Button/Button';
+import { ButtonAppearance } from '~/shared/ui/Button/Button.types';
 import { Slider } from '~/shared/ui/Swiper/Swiper';
 
 import CardStyle from './Card.module.scss';
 import { getRatingClass } from '../Card.utils';
 
 export const Card = ({ card }: { card: CardAPI }) => {
+  const [isAddedCard, setIsAddedCard] = useState(false);
   return (
     <>
       {card ? (
@@ -25,6 +33,24 @@ export const Card = ({ card }: { card: CardAPI }) => {
                   alt="No Image"
                 />
               )}
+              <div className={CardStyle.favorites}>
+                <Button
+                  appearance={
+                    isAddedCard
+                      ? ButtonAppearance.Primary
+                      : ButtonAppearance.Secondary
+                  }
+                  icon={<Favorites></Favorites>}
+                  onClick={() => {
+                    setIsAddedCard((hasBeenAdded) => !hasBeenAdded);
+                  }}
+                ></Button>
+
+                <Button
+                  appearance={ButtonAppearance.Secondary}
+                  icon={<Options></Options>}
+                ></Button>
+              </div>
             </div>
             <div className={CardStyle.text}>
               <span className={CardStyle.genres}>
@@ -46,6 +72,9 @@ export const Card = ({ card }: { card: CardAPI }) => {
                   })}`}
                 >
                   {card.rating.kp.toFixed(1)}
+                </p>
+                <p className={CardStyle.imdb}>
+                  <IconIMDB /> {card.rating.imdb}
                 </p>
                 {card.movieLength && (
                   <p className={CardStyle.movieLength}>
@@ -90,25 +119,6 @@ export const Card = ({ card }: { card: CardAPI }) => {
               <Slider card={card}></Slider>
             </div>
           </div>
-
-          {/* <div className={CardStyle.actors}>
-            {card.persons &&
-              card.persons.map(
-                (person) =>
-                  person.enProfession === 'actor' && (
-                    <div
-                      key={person.id}
-                      className={CardStyle.actorsInfo}
-                    >
-                      <img
-                        className={CardStyle.actorPhoto}
-                        src={person.photo}
-                      ></img>
-                      <span>{person.name}</span>
-                    </div>
-                  )
-              )}
-          </div> */}
         </div>
       ) : null}
     </>

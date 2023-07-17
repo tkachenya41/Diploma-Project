@@ -4,7 +4,7 @@ export interface CardAPI {
   alternativeName: string;
   poster: Record<'url', string>;
   year: number;
-  rating: Record<'kp', number>;
+  rating: Record<'kp' | 'imdb', number>;
   genres: Record<'name', string>[];
   countries: Record<'name', string>[];
   type: string;

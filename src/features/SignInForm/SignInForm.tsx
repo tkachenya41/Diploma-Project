@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 
+import { type AxiosError } from 'axios';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -45,19 +46,22 @@ export const SignInForm = () => {
         event.preventDefault();
         setIsLoading(true);
         dispatch(createTokens(formState))
+          .unwrap()
           .then(() => {
-            setIsLoading(true);
             navigate('/');
+            setIsLoading(true);
           })
-          .catch((error) => {
-            setIsLoading(false);
+          .catch((error: AxiosError) => {
             setErrorMessage((error as Error).message);
+            setIsLoading(false);
           });
       }}
     >
       <h2 className={SignInStyle.text}>Sign In</h2>
       {errorMessage ? (
-        <div style={{ color: 'var(--error-color)' }}>{errorMessage}</div>
+        <div style={{ color: 'var(--error-color)' }}>
+          Something went wrong...
+        </div>
       ) : null}
       <div className={SignInStyle.inputs}>
         <InputField

@@ -13,5 +13,7 @@ export const ButtonAppearance = {
   Primary: 'primary',
   Secondary: 'secondary',
   Arrow: 'arrow',
-  Transparent: 'transparent'
+  Transparent: 'transparent',
+  Filter: 'filter',
+  Clear: 'clear'
 };

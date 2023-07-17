@@ -1,9 +1,13 @@
-.form {
+.wrapper {
+  position: relative;
   flex: 1 1 60%;
   @media (max-width: 520px) {
     order: 3;
   }
-  button {
+}
+
+.form {
+  button[type='submit'] {
     display: none;
   }
 }
@@ -15,9 +19,20 @@
   font-size: 17px;
   padding: 13px 10px;
   color: var(--primary-text-color);
-  width: 93%;
+  width: 100%;
+  box-sizing: border-box;
+  &::placeholder {
+    color: var(--primary-text-color);
+  }
 
   &:focus {
     border-color: var(--border-color);
   }
+}
+.filter {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
 }

@@ -19,10 +19,12 @@ export const cardRequestFields = [
   'alternativeName',
   'id',
   'genres.name',
-  'countries.name'
-  // 'countries',
-  // 'genres'
+  'countries.name',
+  'audience.count'
 ];
 
-export const AmountViewsMovie = '500000-10000000';
-export const AmountViewsBlank = '1-1000000000';
+export const YearProduction = '2018-2023';
+export const RatingKP = '7,5-10';
+export const sortField = 'rating.imdb';
+export const sortType = '-1';
+export const Views = '500000-100000000000000';

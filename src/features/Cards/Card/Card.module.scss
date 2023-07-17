@@ -47,6 +47,16 @@
   .badRating {
     background-color: var(--bad-rating-color);
   }
+  .trend {
+    background-color: var(--primary-color);
+    position: relative;
+    &::before {
+      background: url(/tms-98-react/src/assets/icons/trend.svg);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
   .movieLength {
     display: flex;
     padding: 2px 8px;
@@ -62,6 +72,24 @@
     flex-direction: column;
     gap: 15px;
     margin-bottom: 50px;
+  }
+  .imdb {
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--secondary-text-color);
+    border-radius: 6px;
+  }
+  .favorites {
+    margin-top: 10px;
+    border-radius: 6px;
+    display: flex;
+    padding: 2px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
   .info {
     display: flex;

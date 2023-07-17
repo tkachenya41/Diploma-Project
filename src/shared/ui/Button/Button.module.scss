@@ -28,7 +28,7 @@
   background-color: var(--secondary-color);
   color: var(--text-color);
   &:not(:disabled):hover {
-    color: var(--background-light-color);
+    background-color: var(--secondary-text-color);
   }
 }
 .transparent {
@@ -51,4 +51,10 @@
   width: 24px;
   height: 24px;
   fill: currentColor;
+}
+.filter {
+  background-color: transparent;
+}
+.clear {
+  background-color: var(--background-light-color);
 }

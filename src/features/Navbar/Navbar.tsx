@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Burger } from '~/assets/icons/burger.svg';
 import { ReactComponent as Cross } from '~/assets/icons/cross-burger.svg';
 import { ReactComponent as Pixema } from '~/assets/icons/pixema.svg';
+import { useOutsideClick } from '~/hooks/UseOutsideClick/UseOutsideClick';
 import { Button } from '~/shared/ui/Button/Button';
 
 import NavbarStyle from './Navbar.module.scss';
@@ -18,6 +19,8 @@ export const Navbar = () => {
   const toggleBurger = () => {
     setIsOpen((hasBeenOpened) => !hasBeenOpened);
   };
+
+  const reference = useOutsideClick(() => (isOpen ? toggleBurger() : null));
   return (
     <div className={NavbarStyle.container}>
       <Link
@@ -34,6 +37,7 @@ export const Navbar = () => {
         icon={isOpen ? <Cross /> : <Burger />}
       />
       <Menu
+        reference={reference}
         appearance={NavbarStyle.menu}
         isOpen={isOpen}
         makeOpen={toggleBurger}

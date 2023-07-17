@@ -1,3 +1,5 @@
+import { type RefObject } from 'react';
+
 import { NavLink } from 'react-router-dom';
 
 import { ReactComponent as FavIcon } from '~/assets/icons/favorites.svg';
@@ -12,17 +14,20 @@ import { UserBar } from '../Navbar/UserPanel/UserBar/UserBar';
 export const Menu = ({
   appearance = menuStyle.linksList,
   isOpen,
-  makeOpen
+  makeOpen,
+  reference
 }: {
   appearance?: string;
   isOpen?: boolean;
   makeOpen?: () => void;
+  reference?: RefObject<HTMLDivElement>;
 }) => {
   return (
     <div
       className={appearance}
       data-open={isOpen}
       onClick={makeOpen}
+      ref={reference}
     >
       {Navlinks.map((link) => (
         <NavLink
